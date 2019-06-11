@@ -2,6 +2,8 @@
 <!--gold orangered -->
 <html>
 <head>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css'}">
 	<title>Erick's test site</title>
 </head>
 <style>
@@ -17,10 +19,14 @@
 	}
 </style>
 <body style="background-color:aquamarine">
+
+	<div class="header">UNFITTING HEADER!</div>
+
 	<h2 class="entry">This is text!</h2>
 	<p class="body">so is this</p>
-	<div>
-		{{ posts }}
+
+	<div class="postcss">
+		{% for post in posts %} {{ post }}{% enfor %}
 	</div>
 </body>
 </html>
