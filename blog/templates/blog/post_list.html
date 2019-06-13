@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+	<title>Erick's test site</title>
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<style>
+	.entry{
+		background-color: orangered;
+		margin: 20px;
+		padding: 20px;
+	}
+	.body{
+		background-color: gold;
+		margin: 20px;
+		padding: 20px;
+	}
+</style>
+<body style="background-color:aquamarine">
+
+	<div class="header">UNFITTING HEADER!</div>
+
+	<h2 class="entry">This is text!</h2>
+	<p class="body">so is this</p>
+
+	<div class="postcss">
+		{% for post in posts %} {{ post }}{% endfor %}
+	</div>
+</body>
+</html>
