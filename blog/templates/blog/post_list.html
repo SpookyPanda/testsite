@@ -19,25 +19,25 @@
 </style>
 <body style="background-color:aquamarine">
 
-	<div class="header">UNFITTING HEADER!
-			{% block content %}
+	<div class="header">UNFITTING HEADER! </div>
+		{% block content %}
+
 			{% if user.is_authenticated %}
 			<p>Welcome {{ user.name }}</p>
-			<p><a href="{% url 'logout' %}">logout</a></p>
+			<a href="{% url 'logout' %}">logout</a>
 			{% else %}
+			<div class="topnav">
 			<p>you are not loged in</p>
 			<a href="{% url 'login' %}">login</a>
-
-			{% endif %}
-			{% endblock %}
-
-	</div>
+			</div>
+		{% endif %}
+		{% endblock %}
 
 	<h2 class="entry">This is text!</h2>
 	<p class="body">so is this</p>
 
 	<div class="postcss">
-		{% for post in posts %} {{ post }}{% endfor %}
-	</div>
+		{% for post in posts %} <div class="postcss">
+{{ post }}</div>{% endfor %}
 </body>
 </html>
