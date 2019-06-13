@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 *~.pyc
+=======
+*.pyc
+>>>>>>> ee5b2e9c27b054ba91b6bc2e4723f6a60d5e918b
 *~
 __pycache__
 myvenv
 db.sqlite3
+<<<<<<< HEAD
 .DS_Store
+=======
+/static
+.DS_Store
+>>>>>>> ee5b2e9c27b054ba91b6bc2e4723f6a60d5e918b
