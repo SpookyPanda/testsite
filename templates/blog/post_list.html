@@ -24,11 +24,16 @@
 
 			{% if user.is_authenticated %}
 			<p>Welcome {{ user.name }}</p>
-			<a href="{% url 'logout' %}">logout</a>
+			<div class="topnav">
+				<a href="{% url 'logout' %}">logout</a>
+				<a href="{% url 'namelist' %}">Go to the work sheet</a>
+			</div>
 			{% else %}
 			<div class="topnav">
-			<p>you are not loged in
-			<a href="{% url 'login' %}">login</a> Don't have an account? <a href="{% url 'signup' %}">register</a></p>
+				<p>
+				<a href="{% url 'login' %}">You are not logged in<br>login</a>
+				<a href="{% url 'signup' %}">Don't have an account? <br>register</a>
+				</p>
 			</div>
 		{% endif %}
 		{% endblock %}
