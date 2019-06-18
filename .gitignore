@@ -18,7 +18,7 @@ db.sqlite3
 <<<<<<< HEAD
 .DS_Store
 =======
-/static
+static/admin/*
 .DS_Store
 >>>>>>> ee5b2e9c27b054ba91b6bc2e4723f6a60d5e918b
 >>>>>>> be739c57d46c1b0aad85adbe9796ba1b8e9e90dc
