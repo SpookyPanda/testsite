@@ -7,4 +7,9 @@ def index(request):
 def edit(request):
 	return HttpResponse("Response still working")
 
+def details(request, Persona_id):
+	return HttpResponse("You're looking at %s", Persona_id)
+
+def sched_details(request, Persona_id):
+	return	HttpResponse("you're lokking at %s's schedule", Persona_id)
 # Create your views here.
