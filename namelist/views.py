@@ -9,6 +9,7 @@ def edit(request):
 
 def details(request, Persona_id):
 	return HttpResponse("You're looking at %s", Persona_id)
+	#comment
 
 def sched_details(request, Persona_id):
 	return	HttpResponse("you're lokking at %s's schedule", Persona_id)
