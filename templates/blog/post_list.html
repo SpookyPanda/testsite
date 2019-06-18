@@ -26,7 +26,9 @@
 			<p>Welcome {{ user.name }}</p>
 			<div class="topnav">
 				<a href="{% url 'logout' %}">logout</a>
+				<!--->
 				<a href="{% url 'namelist' %}">Go to the work sheet</a>
+				<-->
 			</div>
 			{% else %}
 			<div class="topnav">
