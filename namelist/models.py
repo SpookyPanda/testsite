@@ -4,8 +4,6 @@ class Persona(models.Model):
 	Name = models.CharField(max_length=200)
 	LastName = models.CharField(max_length=200)
 	StartDate = models.DateTimeField('Starting date')
-	
-
 	def __str__(self):
 		return self.Name
 
