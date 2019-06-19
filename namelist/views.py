@@ -5,7 +5,7 @@ def index(request):
 	return HttpResponse("response working")
 
 def edit(request):
-	return HttpResponse("Response still working")
+	return render(request, 'namelist/main_page.html')
 
 def details(request, Persona_id):
 	return HttpResponse("You're looking at %s", Persona_id)

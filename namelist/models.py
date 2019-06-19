@@ -12,3 +12,11 @@ class Persona(models.Model):
 class Schedule(Persona):
 	CheckIn = models.DateTimeField('Check in')
 	CheckOut = models.DateTimeField('Check out')
+
+	def CheckTimeIn(self):
+		CheckIn=time.now()
+		self.save()
+
+	def CheckTimeOut(self):
+		CheckOut=time.now()
+		self.save()
