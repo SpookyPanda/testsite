@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+	<title>HOME</title>
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<style>
+	.entry{
+		background-color: orangered;
+		margin: 20px;
+		padding: 20px;
+	}
+	.body{
+		background-color: gold;
+		margin: 20px;
+		padding: 20px;
+	}
+</style>
+<body style="background-color:aquamarine">
+
+	<div class="header">UNFITTING HEADER! </div>
+		{% block content %}
+
+			{% if user.is_authenticated %}
+			<p>Welcome {{ user.name }}</p>
+			<div class="topnav">
+				<a href="{% url 'logout' %}">logout</a>
+				<a href="{% url 'edit' %}">Go to the work sheet</a>
+			</div>
+			{% else %}
+			<div class="topnav">
+				<p>
+				<a href="{% url 'login' %}">You are not logged in<br>login</a>
+				<a href="{% url 'signup' %}">Don't have an account? <br>register</a>
+				</p>
+			</div>
+		{% endif %}
+		{% endblock %}
+
+	<h2 class="entry">This is text!</h2>
+	<p class="body">so is this</p>
+
+	<div class="postcss">
+		{% for post in posts %} <div class="postcss">
+{{ post }}</div>{% endfor %}
+</body>
+</html>

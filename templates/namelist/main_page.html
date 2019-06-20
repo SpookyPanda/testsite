@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+
+<head>
+	<title>LIST APP!</title>
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+
+<style type="text/css">
+	.entry{
+		background-color: orangered;
+		margin: 20px;
+		padding: 20px;
+	}
+	.body{
+		background-color: gold;
+		margin: 20px;
+		padding: 20px;
+	}
+</style>
+
+
+<body style="background-color: aquamarine">
+	{% block content %}
+
+		{% if user.is_authenticated %}
+			<div class="topnav">
+				<a href="{% url 'post_list' %}">HOME</a>
+				<a href="{% url 'logout' %}">logout</a>
+			</div>
+
+
+
+		{% else %}
+			<h3 class="entry">User not found!</h3>
+			<h4 class="body">
+				To continue please 
+				<a href="{% url 'login' %}">login</a> or
+				<a href="{% url 'post_list' %}">go back</a>
+			</h4>
+		{% endif %}
+	{% endblock %}
+</body>
+</html>
