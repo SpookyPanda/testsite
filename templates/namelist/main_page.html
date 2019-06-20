@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-
 {% load static %}
-
 <head>
 	<title>LIST APP!</title>
 	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
-
-<style type="text/css">
+<style>
 	.entry{
 		background-color: orangered;
 		margin: 20px;
@@ -21,35 +17,7 @@
 		padding: 20px;
 	}
 </style>
-
-
-<body style="background-color: aquamarine">
-	{% block content %}
-
-		{% if user.is_authenticated %}
-			<div class="topnav">
-				<a href="{% url 'post_list' %}">HOME</a>
-				<a href="{% url 'logout' %}">logout</a>
-			</div>
-
-
-
-		{% else %}
-			<h3 class="entry">User not found!</h3>
-			<h4 class="body">
-				To continue please 
-				<a href="{% url 'login' %}">login</a> or
-				<a href="{% url 'post_list' %}">go back</a>
-			</h4>
-		{% endif %}
-	{% endblock %}
-=======
-{% load static %}
-<head>
-	<title>LIST APP!</title>
-</head>
 <body>
 
->>>>>>> f7ba8597d26ab5c5b1897b9b26243a5e0173c717
 </body>
 </html>
