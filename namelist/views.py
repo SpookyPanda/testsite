@@ -6,7 +6,8 @@ def index(request):
 	return HttpResponse("response working")
 
 def edit(request):
-	return render(request, 'namelist/main_page.html')
+	personal = Persona.objects.all()
+	return render(request, 'namelist/main_page.html', {'personal':personal})
 
 def details(request, Persona_id):
 	personal = Persona.objects.all()

@@ -5,21 +5,39 @@
 	<title>LIST APP!</title>
 	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
-<style>
-	.entry{
-		background-color: orangered;
-		margin: 20px;
-		padding: 20px;
-	}
-	.body{
-		background-color: gold;
-		margin: 20px;
-		padding: 20px;
-	}
-</style>
-<body>
-{% for personal in person %}
-<p>HOWDY</p>
-{% endfor %}
+<body style="background-color: aquamarine;">
+
+	{% block content %}
+
+	{% if user.is_authenticated %}
+
+		<div class="topnav">
+			<a href="{% url 'post_list' %}">Home</a>
+			<a href="{% url 'post_list' %}">Go back</a>
+		</div>
+	{% else %}
+		<div class="topnav">
+			<p>
+			<a href="{% url 'login' %}">You are not logged in<br>login</a>
+			<a href="{% url 'signup' %}">Don't have an account? <br>register</a>
+			</p>
+		</div>
+	{% endif %}
+	{% endblock %}
+
+	<table>
+		<tr>
+			<th>First name</th>
+			<th>Last name</th>
+			<th>more info</th>
+		</tr>
+
+		{% for Persona in personal %}
+			<tr>
+				<td>{{ Persona.Name }}</td>
+				<td>{{ Persona.LastName }}</td>
+			</tr>
+		{% endfor %}
+	</table>
 </body>
 </html>

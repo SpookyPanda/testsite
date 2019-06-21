@@ -1,3 +1,33 @@
+table, th, td{
+	border: 1px solid black;
+}
+
+table{
+	border-collapse: collapse;
+	padding: 20px;
+	text-align: center;
+	background-color: dimgrey;
+}
+
+tr:nth-child(even){
+	background-color: darkslateblue;
+}
+
+tr:nth-child(odd){
+	background-color: steelblue;
+}
+
+.entry{
+	background-color: orangered;
+	margin: 20px;
+	padding: 20px;
+}
+.body{
+	background-color: gold;
+	margin: 20px;
+	padding: 20px;
+}
+
 .header {
 	background-color: lightslategray;
 	text-align: center;

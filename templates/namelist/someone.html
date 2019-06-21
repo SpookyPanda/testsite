@@ -5,21 +5,8 @@
 	<title>LIST APP!</title>
 	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
-<style>
-	.entry{
-		background-color: orangered;
-		margin: 20px;
-		padding: 20px;
-	}
-	.body{
-		background-color: gold;
-		margin: 20px;
-		padding: 20px;
-	}
-</style>
-<body>
-{% for Persona in personal %}
-<p>HOWDY</p>
-{% endfor %}
+
+<body style="background-color: aquamarine;">
+	<p>You are looking at {{Persona.Name}}</p>
 </body>
 </html>
